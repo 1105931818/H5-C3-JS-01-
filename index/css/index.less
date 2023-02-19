@@ -1,0 +1,1422 @@
+@import 'mixins/clear.less';
+
+//最外层的包裹元素
+#wrapper{
+
+
+    //头部
+    #header{
+
+        //导航条
+        .headTop{
+
+            background:#fbf8f8 ;
+            height: 30px;
+
+            //主要元素
+            .headTopMain{
+
+                width: 1200px;
+                margin: 0 auto;
+                line-height: 30px;
+                .clearFix();  //子元素设置浮动，父元素会塌陷。需手动设置，或者oevrflow: hidden
+
+                .left{
+
+                    float: left;
+
+                    form{
+
+                        float: left;
+                        margin-right: 10px;
+
+                        select{
+
+                            outline: 0;
+                            border: 1px solid #fbf8f8;
+                            background: #fbf8f8;
+
+                        }
+
+                    }
+
+                    h5{
+                        float: left;
+                        margin-right: 5px;
+                    }
+
+                    p{
+
+                        float: left;
+
+                        a{
+
+                            //第一个元素
+                            &:first-child{
+
+                                border-right: 1px solid #b3aeae;
+                                padding-right: 5px;
+
+                            }
+
+                        }
+
+                    }
+
+                }
+                .right{
+
+                    float: right;
+
+                    nav{
+
+                        a{
+
+                            margin-left: 5px;
+                            border-right: 1px solid #b3aeae;
+                            padding-right: 12px;
+
+                        }
+                        form{
+
+                            float: right;
+
+                            select{
+
+                                &:first-child{
+                                    margin-left: 5px;
+                                }
+                                outline: 0;
+                                text-align: center;
+                                border: 1px solid #fbf8f8;
+                                background: #fbf8f8;
+                                //最后一个元素
+                                &:last-child{
+                                    margin-left: 0;
+                                }
+
+                            }
+
+                        }
+
+                    
+
+                     }
+
+                }
+
+            }
+
+        }
+
+        //搜索栏
+        .headBottom{
+
+            //主要元素
+            .headBottomMain{
+
+                width: 1200px;
+                height: 130px;
+                margin: 0 auto;
+                .clearFix();
+
+                //logo
+                .logo{
+
+                    float: left;
+                    height: 121px;
+
+                    a{
+
+                        
+                        img{
+                        
+                            padding-left: 34px;
+                            padding-top: 14px;
+                            width: 104px;
+                            height: 57px;
+                            margin: 25px 45px;
+
+                        }
+
+                    }
+
+                }
+                
+                //搜索框
+                .search{
+
+                    float: right;
+                    margin-top: 35px;
+                    padding-right: 240px;
+                    padding-top: 14px;
+
+                    input{
+
+                        //文本框
+                        &:first-child{
+
+                            box-sizing: border-box;
+                            width: 530px;
+                            height: 40px;
+                            padding: 0 4px;
+                            border: 2px solid #f05743;
+                            border-top-left-radius: 12px;
+                            border-bottom-left-radius: 12px;
+                        
+
+                        }
+                        //按钮
+                        &:last-child{
+
+                            width: 72px;
+                            height: 40px;
+                            color: #fff;
+                            background: #f05743;
+                            border: none;
+                            border-top-right-radius: 12px;
+                            border-bottom-right-radius: 12px;
+
+                        }
+                        //休息文本框字体的颜色
+                        &::-webkit-input-placeholder{
+                            color: #a6a1a0;
+                            font-size: 14px;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+    //头部结束
+
+    //分类导航
+    #navWrap{
+
+        //主要元素
+        .navWrapMain{
+
+            width: 1300px;
+            margin: 0 auto;
+            background: #f3f1f0;
+            border: 2px solid #f3f1f0;
+            border-radius: 12px;
+
+            .clearFix();
+            
+            a{
+
+                padding-left: 10px;
+                text-align: center;
+                margin: 0 22px;
+                font-size: 16px;
+                color: #333;
+                float: left;
+                line-height: 52px;
+
+                &:first-child{
+
+                    margin-left: 90px;
+                    width: 180px;
+                    height: 52px;
+                    background: #f05743;
+                    color: #fff;
+                    font-size: 18px;
+                    font-weight: bold;
+                    float: left;
+                    text-align: center;
+                    line-height: 52px;
+                    border-radius: 6px;
+
+                }
+
+            }
+        }       
+
+    }
+    //分类导航结束
+
+    //内容区域
+    #content{
+
+        //主要元素
+        .contentMain{
+
+            width: 1300px;
+            margin: 12px auto 0 auto;
+            background: #f3f1f0;
+            border: 2px solid #f3f1f0;
+            border-radius: 12px;
+
+           //路径导航
+           #navPath{
+
+            padding: 9px 15px 9px 0;
+
+                a{
+
+                    &:first-child{
+
+                        margin-left: 35px;
+
+                    }
+
+                }
+                i{
+
+                    padding: 0 5px;
+
+                }
+
+           }
+
+           //图片效果
+           #center{
+
+                margin: 5px 0 15px;
+                .clearFix();
+
+                #left{
+
+                    width: 400px;
+                    float: left;
+
+                    #leftTop{
+
+                        width: 400px;
+                        position: relative;
+
+                        #samllPic{
+
+                            width: 400px;
+                            height: 400px;
+                            border-bottom: 10px solid #f3f1f0;
+                            border-left: 20px solid #f3f1f0;
+                            border-right: 10px solid #f3f1f0;
+                            position: relative;
+
+                            img{
+
+                                width: 400px;
+                                border-radius: 8px;
+
+
+                            }
+                            .mask{
+
+                                width: 120px;
+                                height: 120px;
+                                background: rgba(255, 255, 255, 0.5);
+                                border: 1px solid #f3f1f0;
+                                border-radius: 8px;
+                                position: absolute;
+                                left: 0px;
+                                top: 0px;
+
+
+                            }
+
+                        }
+                        #bigPic{
+
+                            width: 400px;
+                            height: 400px;
+                            border-bottom: 10px solid #f3f1f0;
+                            border-left: 10px solid #f3f1f0;
+                            left: 420px;
+                            top: 0;
+                            position: absolute;
+                            overflow: hidden;
+
+                            img{
+
+                                width: 800px;
+                                height: 800px;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+
+                            }
+
+                        }
+
+                    }
+                    #leftBottom{
+
+                        width: 440px;
+                        margin-top: 5px;
+                        .clearFix();
+
+                        a{
+
+                            width: 10px;
+                            height: 54px;
+                            border: 1px solid #f3f1f0;
+                            background: #e1dfdf;
+                            text-align: center;
+                            line-height: 54px;
+                            float: left;
+                            &:first-child{
+
+                                margin-right: 4px;
+                                margin-left: 20px;
+
+                            }
+
+                        }
+                        #piclist{
+
+                            width: 372px;
+                            height: 56px;
+                            float: left;
+                            overflow: hidden;
+                            position: relative;
+
+                            ul{
+
+                                white-space: nowrap;
+                                position: absolute;
+                                left: 0px;
+                                transition: 0.5s;
+
+                                li{
+
+                                    width: 50px;
+                                    height: 50px;
+                                    border: 1px solid #f3f1f0;
+                                    padding: 2px;
+                                    margin-right: 20px;
+                                    display: inline-block;
+
+                                    img{
+
+                                        width: 50px;
+                                        height: 50px;
+                                        border-radius: 6px;
+
+                                    }
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+                #right{
+
+                    width: 700px;
+                    float: right;
+
+                    #rightTop{
+
+                        h2{
+
+                            font-size: 16px;
+                            line-height: 21px;
+                            margin-left: 5px;
+
+
+                        }
+                        > p{
+
+                            color: #e12228;
+                            margin-top: 12px;
+
+                        }
+                        .priceWrap{
+
+                            margin-top: 10px;
+                            margin-right: 50px;
+                            line-height: 28px;
+                            background: #e68275;
+                            padding: 7px;
+                            border-radius: 8px;
+
+                            .priceTop{
+
+                               .clearFix();
+
+                                > span{
+
+                                    margin-right: 15px;
+                                    float: left;
+
+                                }
+                                .price{
+
+                                    float: left;
+                                    color: #cc1122;
+
+                                    > span{
+
+                                        font-size: 16px;
+                                        float: left;
+
+                                    }
+                                    > p{
+
+                                        font-size: 24px;
+                                        float: left;
+                                        font-weight: bold;
+
+                                    }
+                                    > i{
+
+                                        font-size: 12px;
+                                        color: #cc1122;
+                                        float: left;
+                                        
+                                    }
+
+                                }
+                                > p{
+
+                                    float: right;
+
+                                    > span{
+
+
+
+                                    }
+
+                                }
+
+                            }
+                            .priceBottom{
+
+                                
+                                .clearFix();
+
+                                > span{
+
+                                    float: left;
+                                    margin-right: 15px;
+
+                                }
+                                > p{
+
+                                    width: 520px;
+                                    line-height: 28px;
+                                    float: left;
+
+                                    > span{
+
+                
+
+                                        &:first-child{
+
+                                            background: #c81623;
+                                            padding: 3px;
+                                            color: #fff;
+                                            border-radius: 4px;
+
+                                        }
+
+                                    }
+
+                                }
+
+                            }
+
+                        }
+                        .support{
+
+                            margin-top: 10px;
+                            line-height: 28px;
+                            margin-right: 50px;
+                            margin-left: 10px;
+                            .clearFix();
+
+                            > span{
+
+                                margin-right: 15px;
+                                float: left;
+
+                            }
+                            > p{
+
+                                float: left;
+                                color: #999;
+
+                            }
+
+                        }
+
+                        .address{
+
+                            border-bottom:1px solid #b1b1b1;
+                            padding-bottom: 5px;
+                            line-height: 28px;
+                            margin-right: 50px;
+                            margin-left: 10px;
+                            .clearFix();
+
+                            > span{
+
+                                margin-right: 15px;
+                                float: left;
+                                margin-left: 1px;
+
+                            }
+                            > p{
+
+                                float: left;
+                                color: #999;
+
+                            }
+
+                        }
+                    }
+                    #rightBottom{
+
+                        margin-top: 10px;
+                        line-height: 28px;
+
+                        .choose{
+
+                            .clearFix();
+
+                            #mask{
+
+                                height: 30px;
+                                background: snow;
+                                border: 1px solid #ddd;
+                                padding: 0 20px;
+                                margin-right: 15px;
+                                margin-left: 10px;
+                                border-radius: 6px;
+                                float: left;
+
+                                a{
+
+                                    color: red;
+                                    margin-left: 20px;
+                                    text-align: center;
+
+                                }
+
+                            }
+
+                        }
+
+                        .chooseWrap{
+
+                            
+
+                            dl{
+
+                                margin-left: 10px;
+                                margin-top: 13px;
+                                margin-bottom: 13px;
+                                .clearFix();
+
+                                dt{
+
+                                    margin-right: 15px;
+                                    float: left;
+
+                                }
+                                dd{
+
+                                    float: left;
+                                    margin-right: 5px;
+                                    color: #666;
+                                    line-height: 24px;
+                                    padding: 2px 14px;
+                                    border: 1px solid #f05743;
+                                    border-radius: 4px;
+
+                                }
+
+                            }
+
+                        }
+
+                        .addCart{
+
+                            .clearFix();
+
+                            .count{
+
+                                width: 55px;
+                                margin-right: 15px;
+                                float: left;
+                                position: relative;
+
+                                input{
+
+                                    width: 46px;
+                                    height: 32px;
+                                    margin-left: 10px;
+                                    margin-top: 10px;
+                                    border: 1px solid #ddd;
+                                    border-top-left-radius:4px ;
+                                    border-bottom-left-radius:4px ;
+                                    color: #555;
+
+                                }
+                                a{
+
+                                    width: 16px;
+                                    height: 16px;
+                                    background: #f05743;
+                                    color: #fff;
+                                    text-align: center;
+                                    line-height: 16px;
+                                    border-top-right-radius:4px ;
+                                    border: 1px solid #f05743;
+                                    position: absolute;
+                                    left: 58px;
+                                    top: 10px;
+                                    right: 1px;
+                                    
+                                    &:last-child{
+                                        top: 27px;
+                                        border-bottom-right-radius:4px ;
+                                        border-top-right-radius:0px ;
+                                        border-top: 0px;
+                                    }
+
+                                }
+
+                            }
+                            button{
+
+                                padding-left: 20px;
+                                padding-right: 20px;
+                                margin-top: 11px;
+                                margin-left: 30px;
+                                height: 32px;
+                                background:#f05743 ;
+                                border: none;
+                                border-radius: 4px;
+                                float: left;
+                                font-size: 16px;
+                                color: #fff;
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+           }
+
+           //商品详情
+           #goodsDetailWrap{
+            
+                width: 1300px;
+                margin: 30px auto 0;
+                .clearFix();
+                margin-top: 80px;
+                margin-bottom: 20px;
+
+                .liftAside{
+
+                    width: 220px;
+                    border: 1px solid rgb(230, 225, 225);
+                    margin-left: 20px;
+                    border-radius: 12px;
+                    float: left;
+                    overflow: hidden;
+
+                    .asideTop{
+
+                        .clearFix();
+
+                        h4{
+
+                            width: 105px;
+                            height: 40px;
+                            background: rgb(230, 225, 225);
+                            text-align: center;
+                            line-height: 40px;
+                            border: 2px solid rgb(255, 255, 255);
+                            float: left;
+                            &:first-child{
+
+                                border-top-left-radius: 11px;
+
+                            }
+                            &:last-child{
+
+                                border-top-right-radius: 11px;
+
+                            }
+                            &.active{
+
+                                background: #f05743;
+                                color: #fff;
+                                width: 105px;
+                                font-size: 15px;
+                                line-height: 37px;
+                                text-align: center;
+                                line-height: 40px;
+
+                            }
+
+                        }
+
+                    }
+                    .asideBottom{
+
+                        padding: 10px;
+                        background: rgb(230, 225, 225);
+                        .clearFix();
+
+                        div{
+
+                           display: none;
+                            &.active{
+
+                                display: block;
+
+                                ul{
+
+                                    &.goodslist1{
+
+                                        li{
+
+                                            width: 50%;
+                                            border-bottom: 1px dashed #f05743;
+                                            line-height: 28px;
+                                            float: left;
+                                            text-align: center;
+                                            
+
+                                        }
+
+                                    }
+                                    &.goodslist2{
+
+                                        margin: 5px 0 15px;
+                                        
+                                       
+                                        li{
+
+                                            border-bottom: 1px solid #f05743;
+                                            margin-bottom: 10px;
+                                           
+                                            img{
+
+                                                width: 198px;
+                                                border-radius: 8px;
+
+                                            }
+                                            span{
+
+
+
+                                            }
+                                            p{
+
+                                                font-size: 16px;
+                                                color: #c81623;
+
+                                            }
+                                            .button{
+
+                                                margin-top: 5px;
+                                                margin-bottom: 5px;
+                                                font-size: 12px;
+                                                text-align: center;
+                                                                         
+
+                                                a{
+
+                                                    color: #000000;
+                                                    padding: 2px 14px;
+                                                    line-height: 18px;
+                                                    border-radius: 4px;  
+                                                    border: 1px solid #e1251b;
+                                                    
+                                                }
+
+                                            }
+
+                                        }
+
+                                    }
+
+                                }
+
+                            }
+
+                        }
+                        div{
+
+                            .goodslist3{
+
+                                margin: 5px 0 10px;
+
+                                li{
+
+                                    width: 50%;
+                                    border-bottom: 1px dashed #f05743;
+                                    line-height: 24px;
+                                    float: left;
+                                    text-align: center;
+                                    font-weight: bold;
+
+                                }
+
+                            }
+                            .goodslist4{
+
+                                li{
+
+                                    border-bottom: 1px solid #f05743;
+                                    margin-bottom: 10px;
+
+                                    img{
+
+                                        width: 198px;
+                                        border-radius: 8px;
+
+                                    }
+                                    span{
+
+                                        font-size: 16px;
+                                        color: #c81623;
+
+                                    }
+                                    .button{
+
+                                        margin-top: 5px;
+                                        margin-bottom: 5px;
+                                        font-size: 12px;
+                                        text-align: center;
+
+                                        a{
+
+                                            color: #000000;
+                                            padding: 2px 14px;
+                                            line-height: 18px;
+                                            border-radius: 4px;  
+                                            border: 1px solid #e1251b;
+
+                                        }
+
+                                    }
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+                .rightDetail{
+
+                    width: 1015px;
+                    margin-left: 20px;
+                    float: left;
+
+                    .chooseBox{
+
+                        border: 1px solid rgb(230, 225, 225);
+                        border-radius: 12px;
+                        margin-bottom: 15px;
+                        overflow: hidden;
+
+                        h4{
+
+                            border-bottom: 1px solid #f05743;
+                            background:rgb(230, 225, 225) ;
+                            color: #333;
+                            padding: 5px 0 5px 25px;
+                            .clearFix();
+
+                        }
+                        .listWrap{
+
+                            width: 100%;
+                            height: 165px;
+                            float: right;
+                            background:rgb(230, 225, 225);
+                            border-bottom: 1px solid #f05743;
+
+                            .left{
+
+                                width: 170px;
+                                height: 160px;
+                                position: relative;
+                                float: left;   
+                                text-align: center;
+                                padding-top: 5px;
+
+                                img{
+
+                                    width: 130px;
+                                    height: 110px;
+                                    border-radius: 6px;
+                                    margin: 0 auto;
+                                }
+                                p{
+
+                                    color: #c81623;
+                                    font-size: 16px;
+
+                                }
+                                i{
+
+                                    position: absolute;
+                                    top: 48px;
+                                    right: -8px;
+                                    font-size: 16px;
+
+                                }
+                                
+
+                            }
+                            .middle{
+
+                                width: 668px;
+                                height: 175px;
+                                float: left;
+                                text-align: center;
+                                padding-top: 5px;
+
+                                li{
+
+                                    width: 175px;
+                                    margin-left: 20px;
+                                    margin-right: 20px;
+                                    float: left;
+
+                                    img{
+
+                                        width: 170px;
+                                        height: 100px;
+                                        border-radius: 6px;
+                                        margin: 0 auto;
+
+                                    }
+                                    > span{
+
+
+
+                                    }
+                                    div{
+
+                                        input{
+
+
+
+                                        }
+                                        > span{
+
+
+
+                                        }
+
+                                    }
+
+                                }
+
+                            }
+                            .right{
+
+                                border-left: 1px solid rgb(230, 225, 225);
+                                float: left;
+                                width: 153px;
+                                height: 175px;
+                                padding-left: 20px;
+
+                                div{
+
+                                    margin-top: 10px;
+                                    margin-bottom: 10px;
+
+                                }
+                                p{
+
+                                    font-weight: bold;
+                                    margin-bottom: 10px;
+
+                                }
+                                i{
+
+                                    color: #b1191a;
+                                    font-size: 16px;
+                                    margin-bottom: 10px;
+
+                                }
+                                button{
+
+                                    padding: 10px 25px;
+                                    font-size: 16px;
+                                    color: #fff;
+                                    background: #f05743;
+                                    border: none;
+                                    border-radius: 6px;
+
+                                }                           
+
+                            }
+
+                        }
+                        .listWrap1{
+
+                            width: 100%;
+                            height: 165px;
+                            float: right;
+                            background:rgb(230, 225, 225);
+
+                            .left{
+
+                                width: 170px;
+                                height: 160px;
+                                position: relative;
+                                float: left;   
+                                text-align: center;
+                                padding-top: 5px;
+
+                                img{
+
+                                    width: 130px;
+                                    height: 110px;
+                                    border-radius: 6px;
+                                    margin: 0 auto;
+                                }
+                                p{
+
+                                    color: #c81623;
+                                    font-size: 16px;
+
+                                }
+                                i{
+
+                                    position: absolute;
+                                    top: 48px;
+                                    right: -8px;
+                                    font-size: 16px;
+
+                                }
+                                
+
+                            }
+                            .middle{
+
+                                width: 668px;
+                                height: 175px;
+                                float: left;
+                                text-align: center;
+                                padding-top: 5px;
+
+                                li{
+
+                                    width: 175px;
+                                    margin-left: 20px;
+                                    margin-right: 20px;
+                                    float: left;
+
+                                    img{
+
+                                        width: 170px;
+                                        height: 100px;
+                                        border-radius: 6px;
+                                        margin: 0 auto;
+
+                                    }
+                                    > span{
+
+
+
+                                    }
+                                    div{
+
+                                        input{
+
+
+
+                                        }
+                                        > span{
+
+
+
+                                        }
+
+                                    }
+
+                                }
+
+                            }
+                            .right{
+
+                                border-left: 1px solid rgb(230, 225, 225);
+                                float: left;
+                                width: 153px;
+                                height: 175px;
+                                padding-left: 20px;
+
+                                div{
+
+                                    margin-top: 10px;
+                                    margin-bottom: 10px;
+
+                                }
+                                p{
+
+                                    font-weight: bold;
+                                    margin-bottom: 10px;
+
+                                }
+                                i{
+
+                                    color: #b1191a;
+                                    font-size: 16px;
+                                    margin-bottom: 10px;
+
+                                }
+                                button{
+
+                                    padding: 10px 25px;
+                                    font-size: 16px;
+                                    color: #fff;
+                                    background: #f05743;
+                                    border: none;
+                                    border-radius: 6px;
+
+                                }                           
+
+                            }
+
+                        }
+
+                    }
+                    .bottomDetail{
+
+                        background: rgb(230, 225, 225);
+                        border: 1px solid #ddd;
+                        border-radius: 12px;
+                        margin-top: 20px;
+
+                        .tabBtns{
+
+                            background: rgb(230, 225, 225);
+                            text-align: center;
+                            border-top-left-radius: 11px;
+                            border-top-right-radius: 11px;
+                            border-bottom: 1px solid #f05743;
+                            .clearFix();
+
+                            li{
+
+                                font-size: 14px;
+                                font-weight: bold;
+                                border-top: 1px solid #ddd;
+                                border-bottom: 1px solid #ddd;
+                                border-right: 1px solid #ddd;
+                                background: #fff;
+                                height: 40px;
+                                padding-left: 11px;
+                                padding-right: 11px;
+                                text-align: center;
+                                line-height: 40px;
+                                float: left;
+                                &:first-child{
+
+                                    border-top-left-radius: 11px;
+                                    border-left: 1px solid #ddd;
+
+                                }
+                                &:last-child{
+
+                                    border-top-right-radius: 11px;
+
+                                }
+                                &.active{
+                                    
+                                    background: #f05743;
+                                    
+                                    a{
+
+                                        color: #fff;
+
+                                    }
+
+                                }
+                                
+
+                            }
+
+                        }
+                        .tabContents{
+
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+
+                            div{
+
+                                padding-left: 25px;
+                                line-height: 30px;
+                                font-size: 14px;
+                                display: none;
+
+                                &.active{
+
+                                    margin: 10px 0;
+                                    display: block;
+
+                                }
+
+                            }
+
+                        }
+                        .tabBottom{
+
+                            margin-top: 10px;
+                            margin-bottom: 20px;
+
+                            img{
+
+                                width: 1013px;
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+           }
+        }
+
+    }
+    //内容区域结束
+
+    //侧边导航栏
+    .rightAside{
+
+        width: 210px;
+        height: 100%;
+        background: #c2b8b8;
+        transition: 0.5s;
+        position: fixed;
+        top: 0px;
+        &.asideClose{
+
+            right: -204px;
+
+        }
+        &.asideOpen{
+
+            right: 0px;
+
+        }
+
+       .btns{
+
+        width: 35px;
+        height: 35px;
+        background: #c2b8b8;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 12px;
+        left: -35px;
+        background-size: 35px 35px;
+        position: absolute;
+        &.btnsClose{
+
+            background-image: url('../img/c1.jpeg');
+
+        }
+        &.btnsOpen{
+
+            background-image: url('../img/c1.jpeg');
+
+        }
+
+       }
+       .content{
+
+            width: 204px;
+            position: absolute;
+            background: rgb(255, 163, 127);
+            left: 6px;
+            top: 0px;
+            bottom: 0px;
+            z-index: 50;
+
+       }
+       .navlist{
+
+        position: absolute;
+        left: -29px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        li{
+
+            width: 35px;
+            height: 35px;
+            position: relative;
+            margin-bottom: 5px;
+            
+
+            p{
+
+                width: 35px;
+                height: 35px;
+                transition: 0.5s;
+                background: #c2b8b8;
+                border-top-left-radius: 8px;
+                border-bottom-left-radius: 8px;
+                //background-size: 35px;
+                //background-image: url('../img/c1.jpeg');
+                // 背景图片定位 background-position: ;
+
+            }
+            i{
+
+                width: 62px;
+                height: 35px;
+                text-align: center;
+                line-height: 35px;
+                position: absolute;
+                left: 35px;
+                top: 0px;
+                transition: 0.5s;
+                background: #c2b8b8;
+                border-top-left-radius: 8px;
+                border-bottom-left-radius: 8px;
+
+            }
+            &:hover{
+
+                p{
+
+                    background-color: rgba(255, 163, 127, 0.7);
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+
+                }
+                i{
+
+                    background-color: rgba(255, 163, 127, 0.7);
+                    left:-62px;
+
+                }
+
+            }
+
+        }
+
+       }
+
+    }
+}
